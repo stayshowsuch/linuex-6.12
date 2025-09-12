@@ -6,5 +6,5 @@
 curl -sS -O https://raw.githubusercontent.com/stayshowsuch/linuex-6.12/f52b4cadd900779994fb3062c10d1699c88799e4/install_kernel_6.12.sh && chmod +x install_kernel_6.12.sh && ./install_kernel_6.12.sh
 ```
 ```bash
-curl -sS -O https://github.com/stayshowsuch/linuex-6.12/blob/e72834d368ed49fc7c6039c071b843990842d851/install_limits.sh && chmod +x limits.sh && ./limits.sh
+curl -sS -O https://raw.githubusercontent.com/stayshowsuch/linuex-6.12/f52b4cadd900779994fb3062c10d1699c88799e4/install_limits.sh && chmod +x limits.sh && ./limits.sh
 ```
