@@ -24,14 +24,14 @@ if [ -f "$LIMITS_CONF" ]; then
 # 自定义限制设置
 * soft nofile 1048576
 * hard nofile 1048576
-* soft nproc unlimited
-* hard nproc unlimited
+* soft nproc 1048576
+* hard nproc 1048576
 * soft memlock unlimited
 * hard memlock unlimited
 * soft stack 1048576
 * hard stack 1048576
-* soft core unlimited
-* hard core unlimited
+* soft core 1048576
+* hard core 1048576
 EOF
     echo "已更新 $LIMITS_CONF 中的限制"
 fi
