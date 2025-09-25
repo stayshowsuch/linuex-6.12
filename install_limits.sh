@@ -21,14 +21,14 @@ if [ -f "$LIMITS_CONF" ]; then
 
     # 追加新配置
     cat << EOF >> "$LIMITS_CONF"
-* soft nofile 1048576
-* hard nofile 1048576
-* soft nproc 1048576
-* hard nproc 1048576
+* soft nofile unlimited
+* hard nofile unlimited
+* soft nproc unlimited
+* hard nproc unlimited
 * soft memlock unlimited
 * hard memlock unlimited
-* soft stack 1048576
-* hard stack 1048576
+* soft stack unlimited
+* hard stack unlimited
 * soft core 1048576
 * hard core 1048576
 EOF
@@ -48,12 +48,12 @@ if [ -f "$SYSTEMD_CONF" ]; then
 
     # 追加新配置
     cat << EOF >> "$SYSTEMD_CONF"
-DefaultLimitNOFILE=1048576
-DefaultLimitNOFILESoft=1048576
-DefaultLimitNPROC=unlimited
-DefaultLimitNPROCSoft=unlimited
-DefaultLimitMEMLOCK=unlimited
-DefaultLimitMEMLOCKSoft=unlimited
+DefaultLimitNOFILE=infinity:infinity
+DefaultLimitNOFILESoft=infinity
+DefaultLimitNPROC=infinity
+DefaultLimitNPROCSoft=infinity
+DefaultLimitMEMLOCK=infinity
+DefaultLimitMEMLOCKSoft=infinity
 EOF
     echo "已更新 $SYSTEMD_CONF 中的限制"
 fi
@@ -71,12 +71,12 @@ if [ -f "$USER_CONF" ]; then
 
     # 追加新配置
     cat << EOF >> "$USER_CONF"
-DefaultLimitNOFILE=1048576
-DefaultLimitNOFILESoft=1048576
-DefaultLimitNPROC=unlimited
-DefaultLimitNPROCSoft=unlimited
-DefaultLimitMEMLOCK=unlimited
-DefaultLimitMEMLOCKSoft=unlimited
+DefaultLimitNOFILE=infinity:infinity
+DefaultLimitNOFILESoft=infinity
+DefaultLimitNPROC=infinity
+DefaultLimitNPROCSoft=infinity
+DefaultLimitMEMLOCK=infinity
+DefaultLimitMEMLOCKSoft=infinity
 EOF
     echo "已更新 $USER_CONF 中的限制"
 fi
