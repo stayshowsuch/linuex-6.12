@@ -21,7 +21,6 @@ if [ -f "$LIMITS_CONF" ]; then
 
     # 追加新配置
     cat << EOF >> "$LIMITS_CONF"
-# 自定义限制设置
 * soft nofile 1048576
 * hard nofile 1048576
 * soft nproc 1048576
