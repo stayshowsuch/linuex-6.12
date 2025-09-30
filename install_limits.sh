@@ -21,16 +21,14 @@ if [ -f "$LIMITS_CONF" ]; then
 
     # 追加新配置
     cat << EOF >> "$LIMITS_CONF"
-* soft nofile unlimited
-* hard nofile unlimited
-* soft nproc unlimited
-* hard nproc unlimited
-* soft memlock unlimited
-* hard memlock unlimited
-* soft stack unlimited
-* hard stack unlimited
+* soft nofile 1048576
+* hard nofile 1048576
+* soft nproc 1048576
+* hard nproc 1048576
 * soft core 1048576
 * hard core 1048576
+* hard memlock unlimited
+* soft memlock unlimited
 EOF
     echo "已更新 $LIMITS_CONF 中的限制"
 fi
