@@ -49,11 +49,9 @@ if [ -f "$SYSTEMD_CONF" ]; then
     # 追加新配置
     cat << EOF >> "$SYSTEMD_CONF"
 DefaultLimitNOFILE=infinity:infinity
-DefaultLimitNOFILESoft=infinity
-DefaultLimitNPROC=infinity
-DefaultLimitNPROCSoft=infinity
-DefaultLimitMEMLOCK=infinity
-DefaultLimitMEMLOCKSoft=infinity
+DefaultLimitNPROC=infinity:infinity
+DefaultLimitMEMLOCK=infinity:infinity
+DefaultTasksMax=infinity
 EOF
     echo "已更新 $SYSTEMD_CONF 中的限制"
 fi
@@ -72,11 +70,9 @@ if [ -f "$USER_CONF" ]; then
     # 追加新配置
     cat << EOF >> "$USER_CONF"
 DefaultLimitNOFILE=infinity:infinity
-DefaultLimitNOFILESoft=infinity
-DefaultLimitNPROC=infinity
-DefaultLimitNPROCSoft=infinity
-DefaultLimitMEMLOCK=infinity
-DefaultLimitMEMLOCKSoft=infinity
+DefaultLimitNPROC=infinity:infinity
+DefaultLimitMEMLOCK=infinity:infinity
+DefaultTasksMax=infinity
 EOF
     echo "已更新 $USER_CONF 中的限制"
 fi
